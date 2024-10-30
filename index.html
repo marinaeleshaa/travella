@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/all.css" />
+  </head>
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-lg fixed-top"
+        style="background-color: var(--The-darkest); height: 50px"
+      >
+        <div class="container-fluid">
+          <input type="image" src="img/logo.png" class="logo" alt="logo" />
+          <a class="navbar-brand m-3 pe-3" style="color: white" href="#"
+            >Travela</a
+          >
+          <button
+            class="navbar-toggler mb-4"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active text-white"
+                  aria-current="page"
+                  href="#"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">contact us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <button
+                  class="nav-link text-white dropdown-toggle border-2 border-dark rounded-3"
+                  href="#"
+                  id="nav-Dropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  countries
+                </button>
+                <ul
+                  class="dropdown-menu mt-1"
+                  aria-labelledby="nav-Dropdown"
+                  style="background-color: white"
+                >
+                  <li>
+                    <a class="dropdown-item" target="_blank" href="#egypt"
+                      >Egypt</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" target="_blank" href="#paris"
+                      >Paris</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" target="_blank" href="maldives"
+                      >Maldives</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" target="_blank" href="#barcelona"
+                      >Barcelona</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex column-gap-2 align-items-center">
+              <input
+                class="form-control p-2"
+                type="search"
+                placeholder="Search for another city"
+                aria-label="Search"
+              />
+              <button
+                class="btn bg-white rounded-3 col-1 p-2"
+                type="submit"
+                style="color: var(--The-darkest)"
+              >
+                Search
+              </button>
+              <button
+                class="btn bg-white rounded-3 col-1 p-2"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#login"
+                style="color: var(--The-darkest); width: 40px"
+              >
+                Login
+              </button>
+              <button
+                class="btn bg-white rounded-3 sign col-1 p-2"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#signup"
+                style="color: var(--The-darkest)"
+              >
+                sign-up
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Modal login -->
+    <div
+      class="modal fade"
+      id="login"
+      tabindex="-1"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      aria-labelledby="Login"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div
+            class="modal-header text-white"
+            style="background-color: var(--The-darkest)"
+          >
+            <h1 class="modal-title fs-4" id="Login">login</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <!-- Modal Body with log in Form -->
+          <div class="modal-body">
+            <form style="color: var(--The-darkest)">
+              <div class="mb-3">
+                <label for="LginEmail" class="form-label fs-5"
+                  >Email address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="LginEmail"
+                  aria-describedby="emailHelp"
+                />
+                <div
+                  id="emailHelp"
+                  class="form-text fs-6"
+                  style="color: var(--The-darkest)"
+                >
+                  We'll never share your email with anyone else.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="Login-Pass" class="form-label fs-5">Password</label>
+                <input type="password" class="form-control" id="Login-Pass" />
+              </div>
+              <div class="form-check form-switch">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  role="switch"
+                  id="flexSwitchCheckChecked"
+                  checked
+                />
+                <label
+                  class="form-check-label fs-6"
+                  for="flexSwitchCheckChecked"
+                  >Remember me</label
+                >
+              </div>
+            </form>
+          </div>
+
+          <!-- Modal Footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn me-2" data-bs-dismiss="modal">
+              Close
+            </button>
+            <button type="submit" class="btn">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal login -->
+
+    <!-- Modal sign up -->
+    <div
+      class="modal fade"
+      id="signup"
+      tabindex="-1"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      aria-labelledby="signup"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div
+            class="modal-header text-white"
+            style="background-color: var(--The-darkest)"
+          >
+            <h1 class="modal-title fs-4" id="signupLabel">Sign Up</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <!-- Modal Body with Sign Up Form -->
+          <div class="modal-body">
+            <form style="color: var(--The-darkest)">
+              <!-- First Name -->
+              <div class="mb-3">
+                <label for="signupFirstName" class="form-label fs-5"
+                  >First Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="signupFirstName"
+                  required
+                />
+              </div>
+
+              <!-- Last Name -->
+              <div class="mb-3">
+                <label for="signupLastName" class="form-label fs-5"
+                  >Last Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="signupLastName"
+                  required
+                />
+              </div>
+
+              <!-- Email Address -->
+              <div class="mb-3">
+                <label for="signupEmail" class="form-label fs-5"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="signupEmail"
+                  aria-describedby="emailHelp"
+                  required
+                />
+                <div
+                  id="emailHelp"
+                  class="form-text fs-6"
+                  style="color: var(--The-darkest)"
+                >
+                  We'll never share your email with anyone else.
+                </div>
+              </div>
+
+              <!-- Password -->
+              <div class="mb-3">
+                <label for="signupPassword" class="form-label fs-5"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="signupPassword"
+                  required
+                />
+              </div>
+
+              <!-- Confirm Password -->
+              <div class="mb-3">
+                <label for="confirmPassword" class="form-label fs-5"
+                  >Confirm Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="confirmPassword"
+                  required
+                />
+              </div>
+
+              <!-- Terms and Conditions Checkbox -->
+              <div class="form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="termsCheck"
+                  required
+                />
+                <label class="form-check-label fs-6" for="termsCheck">
+                  I agree to the terms and conditions
+                </label>
+              </div>
+            </form>
+          </div>
+
+          <!-- Modal Footer -->
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal sign up -->
+
+    <!-- Carousel -->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+      <!-- Indicators/dots -->
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#demo"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+          style="background-color: var(--The-darkest)"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#demo"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+          style="background-color: var(--The-darkest)"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#demo"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+          style="background-color: var(--The-darkest)"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#demo"
+          data-bs-slide-to="3"
+          aria-label="Slide 4"
+          style="background-color: var(--The-darkest)"
+        ></button>
+      </div>
+
+      <!-- The slideshow/carousel -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/cairo/img1.jpg" alt="cairo" class="d-block w-100" />
+          <div
+            class="carousel-caption d-flex flex-column align-items-center justify-content-center rounded-5"
+          >
+            <h2>EGYPT</h2>
+            <p class="fs-6">let's have great time in cairo!</p>
+            <a
+              href="#"
+              class="btn text-white text-shadow fs-6"
+              target="_blank"
+              style="background-color: var(--The-darkest)"
+              >Visit Us</a
+            >
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/paris/img1.webp" alt="paris" class="d-block w-100" />
+          <div
+            class="carousel-caption d-flex flex-column align-items-center justify-content-center rounded-5"
+          >
+            <h2>PARIS</h2>
+            <p class="fs-6">love you paris!</p>
+            <a
+              href="#"
+              class="btn text-white text-shadow fs-6"
+              target="_blank"
+              style="background-color: var(--The-darkest)"
+              >Visit Us</a
+            >
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="img/Maldives/img1.webp"
+            alt="Maldives"
+            class="d-block w-100"
+          />
+          <div
+            class="carousel-caption d-flex flex-column align-items-center justify-content-center rounded-5"
+          >
+            <h2>Maldives</h2>
+            <p class="fs-6">just relax!</p>
+            <a
+              href="#"
+              class="btn text-white text-shadow fs-6"
+              target="_blank"
+              style="background-color: var(--The-darkest)"
+              >Visit Us</a
+            >
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="img/barcelona/img1.webp"
+            alt="Barcelona"
+            class="d-block w-100"
+          />
+          <div
+            class="carousel-caption d-flex flex-column align-items-center justify-content-center rounded-5"
+          >
+            <h2>Barcelona</h2>
+            <p class="fs-6">We love this city!</p>
+            <a
+              href="#"
+              class="btn text-white text-shadow fs-6"
+              target="_blank"
+              style="background-color: var(--The-darkest)"
+              >Visit Us</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Left and right controls/icons -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#demo"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#demo"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- /carousel -->
+
+    <!-- welcome section -->
+    <section
+      class="welcome-sec mt-4 rounded-5 mx-xl-0 mx-sm-3"
+      style="background-color: var(--light); color: var(--The-darkest)"
+    >
+      <div class="container-fluid p-5 welcome-sec">
+        <div
+          class="welcome-sec-head d-flex flex-row align-items-center column-gap-3"
+        >
+          <i class="fa-regular fa-handshake fs-3"></i>
+          <h3 class="fs-3">welcome</h3>
+        </div>
+        <p style="color: var(--dark)" class="fs-6">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora qui
+          nihil dolorem sequi, natus blanditiis mollitia ullam, maiores adipisci
+          dignissimos placeat modi eveniet dolor tempore maxime temporibus. Hic
+          a nostrum unde ex repudiandae, debitis cum distinctio dicta ratione ea
+          ipsum modi necessitatibus sed minima reprehenderit, iusto eos, quo
+          quis illum?
+        </p>
+        <button class="btn">Learn More</button>
+      </div>
+    </section>
+    <!-- welcome section -->
+
+    <!-- egypt section -->
+    <section class="egypt-sec mt-4" id="egypt">
+      <!-- head -->
+      <div
+        class="container-fluid p-4 d-flex justify-content-center align-items-center egypt-head fs-1 text-white"
+        style="background-color: var(--The-darkest)"
+      >
+        <h1>Popular Destination In Egypt</h1>
+      </div>
+      <!-- head -->
+
+      <!-- accordion -->
+      <div class="container-fluid mt-3 rounded-5 mx-xl-1 mx-sm-3">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item rounded-5">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed rounded-5 fs-4 text-white"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne"
+                aria-expanded="false"
+                aria-controls="flush-collapseOne"
+                style="background-color: var(--The-darkest)"
+              >
+                The Pyramids of Giza
+              </button>
+            </h2>
+            <div
+              id="flush-collapseOne"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div
+                class="accordion-body rounded-5 fs-6"
+                style="
+                  background-color: var(--light);
+                  color: var(--The-darkest);
+                "
+              >
+                standing as the last remaining wonder of the ancient world, are
+                an awe-inspiring testament to human ingenuity and the power of
+                ancient civilizations. These magnificent structures, built over
+                4,500 years ago, continue to captivate visitors with their sheer
+                size and intricate design. As you wander among the pyramids and
+                gaze upon the enigmatic Sphinx, you'll be transported back in
+                time to an era of pharaohs and mysteries.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed rounded-5 fs-4 text-white"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseTwo"
+                aria-expanded="false"
+                aria-controls="flush-collapseTwo"
+                style="background-color: var(--dark)"
+              >
+                Cairo Tower
+              </button>
+            </h2>
+            <div
+              id="flush-collapseTwo"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div
+                class="accordion-body rounded-5 fs-6"
+                style="
+                  background-color: var(--light);
+                  color: var(--The-darkest);
+                "
+              >
+                Cairo, a city steeped in history, is home to the iconic Cairo
+                Tower. This 187-meter-tall tower, located in the heart of the
+                city, offers breathtaking panoramic views of the city skyline
+                and the Nile River. As you ascend to the observation deck,
+                you'll be rewarded with a bird's-eye view of the city's
+                landmarks, including the Pyramids of Giza, the Citadel of Salah
+                al-Din, and the Islamic Cairo district. The tower's revolving
+                restaurant provides a unique dining experience, allowing you to
+                savor delicious cuisine while enjoying the stunning vistas.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed rounded-5 fs-4 text-white"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseThree"
+                aria-expanded="false"
+                aria-controls="flush-collapseThree"
+                style="background-color: var(--medium)"
+              >
+                Kaitbay Citadel
+              </button>
+            </h2>
+            <div
+              id="flush-collapseThree"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div
+                class="accordion-body rounded-5 fs-6"
+                style="
+                  background-color: var(--light);
+                  color: var(--The-darkest);
+                "
+              >
+                a magnificent fortress overlooking the Mediterranean Sea, stands
+                as a testament to Egypt's rich maritime history. This
+                15th-century citadel, built by Sultan Al-Ashraf Sayf al-Din
+                Kaitbay, offers breathtaking views of the coast and the city of
+                Alexandria. Explore the fortress's imposing walls, majestic
+                towers, and serene courtyards, and step back in time to an era
+                of naval power and Islamic architecture. The citadel's strategic
+                location and impressive fortifications provide a glimpse into
+                Egypt's past as a maritime empire.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- accordion -->
+    </section>
+
+    <!-- translation -->
+    <!-- translation from arabic to english-->
+    <section class="translation-sec mt-4 mx-xl-0 mx-sm-3">
+      <div class="container-fluid">
+        <div class="card rounded-5 text-capitalize border-0">
+          <div
+            class="card-header text-center fs-3 rounded-top-5 text-white d-flex justify-content-center align-items-center column-gap-2"
+            style="background-color: var(--The-darkest)"
+          >
+            <i class="fa-solid fa-language fs-3"></i>
+            <p class="mb-0">translate from arabic to english</p>
+          </div>
+          <div
+            class="card-body p-4 rounded-bottom-5"
+            style="background-color: var(--light)"
+          >
+            <h4 class="card-title" style="color: var(--The-darkest)">
+              write and translate
+              <a href="" class="fs-4 translate-link">press here</a>
+            </h4>
+            <div class="my-3">
+              <textarea
+                name=""
+                id=""
+                class="w-100 rounded-5 border-0 translate-cont p-3"
+                placeholder="enter what you want to translate here"
+              ></textarea>
+            </div>
+            <div class="d-flex justify-content-end">
+              <a href="#" class="btn btn-primary">copy text</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- translation from arabic to french-->
+    <section class="translation-sec mt-4 mx-xl-0 mx-sm-3">
+      <div class="container-fluid">
+        <div class="card rounded-5 text-capitalize border-0">
+          <div
+            class="card-header text-center fs-3 rounded-top-5 text-white d-flex justify-content-center align-items-center column-gap-2"
+            style="background-color: var(--The-darkest)"
+          >
+            <i class="fa-solid fa-language fs-3"></i>
+            <p class="mb-0">translate from arabic to french</p>
+          </div>
+          <div
+            class="card-body p-4 rounded-bottom-5"
+            style="background-color: var(--light)"
+          >
+            <h4 class="card-title" style="color: var(--The-darkest)">
+              write and translate
+              <a href="" class="fs-4 translate-link">press here</a>
+            </h4>
+            <div class="my-3">
+              <textarea
+                name=""
+                id=""
+                class="w-100 rounded-5 border-0 translate-cont p-3"
+                placeholder="enter what you want to translate here"
+              ></textarea>
+            </div>
+            <div class="d-flex justify-content-end">
+              <a href="#" class="btn btn-primary">copy text</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- translation from arabic to german-->
+    <section class="translation-sec mt-4 mx-xl-0 mx-sm-3">
+      <div class="container-fluid">
+        <div class="card rounded-5 text-capitalize border-0">
+          <div
+            class="card-header text-center fs-3 rounded-top-5 text-white d-flex justify-content-center align-items-center column-gap-2"
+            style="background-color: var(--The-darkest)"
+          >
+            <i class="fa-solid fa-language fs-3"></i>
+            <p class="mb-0">translate from arabic to german</p>
+          </div>
+          <div
+            class="card-body p-4 rounded-bottom-5"
+            style="background-color: var(--light)"
+          >
+            <h4 class="card-title" style="color: var(--The-darkest)">
+              write and translate
+              <a href="" class="fs-4 translate-link">press here</a>
+            </h4>
+            <div class="my-3">
+              <textarea
+                name=""
+                id=""
+                class="w-100 rounded-5 border-0 translate-cont p-3"
+                placeholder="enter what you want to translate here"
+              ></textarea>
+            </div>
+            <div class="d-flex justify-content-end">
+              <a href="#" class="btn btn-primary">copy text</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- translation -->
+
+    <!-- fixed section 1 -->
+    <div class="fixed-sec mt-4">
+      <div class="container-fluid p-0">
+        <div class="fixed-cont"></div>
+      </div>
+    </div>
+    <!-- fixed section 1 -->
+
+    <!-- barcelona section -->
+    <section class="cards-sec" id="barcelona">
+      <!-- head -->
+      <div
+        class="container-fluid p-4 d-flex justify-content-center align-items-center egypt-head fs-1 text-white"
+        style="background-color: var(--The-darkest)"
+      >
+        <h1>Popular Destination In Barcelona</h1>
+      </div>
+      <!-- head -->
+
+      <div class="container py-5 px-lg-0 px-sm-3">
+        <div
+          class="row row-gap-5 d-flex align-items-center justify-content-center"
+        >
+          <!-- card 1 -->
+          <div class="col-xl-3 col-lg-5 col-md-6 col-sm-11 col-11">
+            <div class="card rounded-5 p-3 edit-card">
+              <img
+                src="img/barcelona/campno.jpeg"
+                class="card-img-top rounded-5"
+                alt="..."
+              />
+              <div
+                class="card-body z-1 w-100 d-flex flex-column justify-content-between"
+              >
+                <h5 class="card-title">Camp nou Stadium</h5>
+                <p class="card-text">
+                  With a capacity of 99,354, it is now the biggest stadium in
+                  Europe. However, the total capacity has varied over the years
+                  owing to different modifications.
+                </p>
+                <a href="#" class="btn">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <!-- card 2 -->
+          <div class="col-xl-3 col-lg-5 col-md-6 col-sm-11 col-11">
+            <div class="card rounded-5 p-3 edit-card">
+              <img
+                src="img/barcelona/Gaudi buildings.jpg"
+                class="card-img-top rounded-5"
+                alt="..."
+              />
+              <div
+                class="card-body z-1 w-100 d-flex flex-column justify-content-between"
+              >
+                <h5 class="card-title">Gaudi buildings</h5>
+                <p class="card-text">
+                  Antoni Gaudí is a Spanish architect whose works are mostly
+                  located in Barcelona. He is the designer of Sagrada Familia
+                  and other outstanding buildings.
+                </p>
+                <a href="#" class="btn">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <!-- card 3 -->
+          <div class="col-xl-3 col-lg-5 col-md-6 col-sm-11 col-11">
+            <div class="card rounded-5 p-3 edit-card">
+              <img
+                src="img/barcelona/Güell Park.webp"
+                class="card-img-top rounded-5"
+                alt="..."
+              />
+              <div
+                class="card-body z-1 w-100 d-flex flex-column justify-content-between"
+              >
+                <h5 class="card-title">Güell Park</h5>
+                <p class="card-text">
+                  The park is one of the largest green spaces in Barcelona,
+                  ​​with more than 17 hectares, next to the Sierra de Collserola
+                </p>
+                <a href="#" class="btn">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <!-- card 4 -->
+          <div class="col-xl-3 col-lg-5 col-md-6 col-sm-11 col-11">
+            <div class="card rounded-5 p-3 edit-card">
+              <img
+                src="img/barcelona/La Rambla Street.jpeg"
+                class="card-img-top rounded-5"
+                alt="..."
+              />
+              <div
+                class="card-body z-1 w-100 d-flex flex-column justify-content-between"
+              >
+                <h5 class="card-title">La Rambla Street</h5>
+                <p class="card-text">
+                  La Rambla, is considered the most well known street in central
+                  Barcelona. A tree-lined pedestrian street, it stretches for
+                  1.2 kilometres connecting the Plaça de
+                </p>
+                <a href="#" class="btn">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <!-- card 5 -->
+          <div class="col-xl-3 col-lg-5 col-md-6 col-sm-11 col-11">
+            <div class="card rounded-5 p-3 edit-card">
+              <img
+                src="img/barcelona/Montjuïc Palace.jpg"
+                class="card-img-top rounded-5"
+                alt="..."
+              />
+              <div
+                class="card-body z-1 w-100 d-flex flex-column justify-content-between"
+              >
+                <h5 class="card-title">Montjuïc Palace</h5>
+                <p class="card-text">
+                  Montjuïc Castle is an old military fortress, with roots dating
+                  back from 1640, built on top of Montjuïc hill in Barcelona,
+                  Catalonia, Spain.
+                </p>
+                <a href="#" class="btn">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <!-- card 6 -->
+          <div class="col-xl-3 col-lg-5 col-md-6 col-sm-11 col-11">
+            <div class="card rounded-5 p-3 edit-card">
+              <img
+                src="img/barcelona/santamariacathedral-_3667.jpg"
+                class="card-img-top rounded-5"
+                alt="..."
+              />
+              <div
+                class="card-body z-1 w-100 d-flex flex-column justify-content-between"
+              >
+                <h5 class="card-title">santa maria cathedral</h5>
+                <p class="card-text">
+                  Santa Maria del Mar is a church in the Ribera district of
+                  Barcelona, Catalonia, Spain, built between 1329 and 1383 at
+                  the height of Principality of Catalonia's maritime and
+                  mercantile preeminence.
+                </p>
+                <a href="#" class="btn">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <!-- card 7 -->
+          <div class="col-xl-3 col-lg-5 col-md-6 col-sm-11 col-11">
+            <div class="card rounded-5 p-3 edit-card">
+              <img
+                src="img/barcelona/7.jpeg"
+                class="card-img-top rounded-5"
+                alt="..."
+              />
+              <div
+                class="card-body z-1 w-100 d-flex flex-column justify-content-between"
+              >
+                <h5 class="card-title">Palau de la Música Catalana</h5>
+                <p class="card-text">
+                  A stunning example of Catalan Modernisme architecture, the
+                  Palau de la Música Catalana is a masterpiece designed by Lluís
+                  Domènech i Montaner.
+                </p>
+                <a href="#" class="btn">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <!-- card 8 -->
+          <div class="col-xl-3 col-lg-5 col-md-6 col-sm-11 col-11">
+            <div class="card rounded-5 p-3 edit-card">
+              <img
+                src="img/barcelona/8.jpeg"
+                class="card-img-top rounded-5"
+                alt="..."
+              />
+              <div
+                class="card-body z-1 w-100 d-flex flex-column justify-content-between"
+              >
+                <h5 class="card-title">Gothic Quarter</h5>
+                <p class="card-text">
+                  Gothic Quarter The Gothic Quarter, or Barri Gòtic, is a
+                  historic district in the heart of Barcelona. Wander through
+                  its narrow, winding streets and discover hidden squares,
+                  ancient churches, and charming shops.
+                </p>
+                <a href="#" class="btn">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- barcelona section -->
+
+    <!-- fixed section 2 -->
+    <div class="fixed-sec mt-4">
+      <div class="container-fluid p-0">
+        <div class="fixed-cont-2 fixed-cont"></div>
+      </div>
+    </div>
+    <!-- fixed section 2 -->
+
+    <!-- paris section -->
+    <section class="paris-sec" id="paris">
+      <!-- head -->
+      <div
+        class="container-fluid p-4 d-flex justify-content-center align-items-center egypt-head fs-1 text-white"
+        style="background-color: var(--The-darkest)"
+      >
+        <h1>Popular Destination In paris</h1>
+      </div>
+      <!-- head -->
+      <!-- paris content -->
+      <div class="container py-5 px-lg-0 px-sm-3">
+        <div
+          class="text-center text-capitalize fs-2 text-white rounded-5 mb-5"
+          style="background-color: var(--The-darkest)"
+        >
+          paris news
+        </div>
+        <div class="d-flex flex-column row-gap-5">
+          <!-- card 1 -->
+          <div class="card mb-3 rounded-5 paris-edit">
+            <div class="row g-0">
+              <div class="col-md-3 contain-before">
+                <div class="contain-img rounded-5 h-100">
+                  <img
+                    src="img/paris/p1.jpg"
+                    class="img-fluid w-100 pop-img h-100"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <div class="col-md-9">
+                <div
+                  class="card-body p-4 ms-md-4 paris-body h-100 rounded-5 content-body"
+                >
+                  <h5 class="card-title fs-3">Eiffel tower</h5>
+                  <div
+                    class="d-flex justify-content-start column-gap-2 align-items-center date-before"
+                  >
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <p class="m-0">fri 17th 2024</p>
+                  </div>
+                  <p class="card-text fs-6 mt-2">
+                    The Eiffel Tower is a wrought-iron lattice tower on the
+                    Champ de Mars in Paris, France. It is named after the
+                    engineer Gustave Eiffel, whose company designed and built
+                    the tower from 1887 to 1889. Locally nicknamed "La dame de
+                    fer", it was constructed as the centerpiece of the 1889
+                    World's Fair.
+                  </p>
+                  <p class="card-text" style="color: var(--medium)">
+                    <small>Last updated 3 mins ago</small>
+                  </p>
+                  <div class="d-flex text-capitalize column-gap-2">
+                    <a href="" class="btn paris-btn">
+                      <i class="fa-solid fa-podcast"></i> podcast</a
+                    >
+                    <a href="" class="btn paris-btn">
+                      <i class="fa-solid fa-clock"></i> time</a
+                    >
+                    <a href="" class="btn paris-btn">
+                      <i class="fa-solid fa-play"></i> play</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- card 2 -->
+          <div class="card mb-3 rounded-5 paris-edit paris-edit-2">
+            <div class="row g-0">
+              <div class="col-md-9">
+                <div
+                  class="card-body p-4 ms-md-4 paris-body h-100 rounded-5 content-body"
+                >
+                  <h5 class="card-title fs-3">Notre Dame Cathedral</h5>
+                  <div
+                    class="d-flex justify-content-start column-gap-2 align-items-center date-before"
+                  >
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <p class="m-0">fri 17th 2024</p>
+                  </div>
+                  <p class="card-text fs-6 mt-2">
+                    Notre-Dame de Paris, referred to simply as Notre-Dame, is a
+                    medieval Catholic cathedral on the Île de la Cité, in the
+                    4th arrondissement of Paris, France. The cathedral,
+                    dedicated to the Virgin Mary, is considered one of the
+                    finest examples of French Gothic architecture.
+                  </p>
+                  <p class="card-text" style="color: var(--medium)">
+                    <small>Last updated 3 mins ago</small>
+                  </p>
+                  <div class="d-flex text-capitalize column-gap-2">
+                    <a href="" class="btn paris-btn">
+                      <i class="fa-solid fa-podcast"></i> podcast</a
+                    >
+                    <a href="" class="btn paris-btn">
+                      <i class="fa-solid fa-clock"></i> time</a
+                    >
+                    <a href="" class="btn paris-btn">
+                      <i class="fa-solid fa-play"></i> play</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 contain-before">
+                <div class="contain-img rounded-5 h-100">
+                  <img
+                    src="img/paris/p2.avif"
+                    class="img-fluid w-100 pop-img h-100"
+                    alt="..."
+                    style="height: 300px"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- card 3 -->
+          <div class="card mb-3 rounded-5 paris-edit">
+            <div class="row g-0">
+              <div class="col-md-3 contain-before">
+                <div class="contain-img rounded-5 h-100">
+                  <img
+                    src="img/paris/p3.jpg"
+                    class="img-fluid w-100 pop-img h-100"
+                    alt="..."
+                    style="height: 300px"
+                  />
+                </div>
+              </div>
+              <div class="col-md-9">
+                <div
+                  class="card-body p-4 ms-md-4 paris-body h-100 rounded-5 content-body"
+                >
+                  <h5 class="card-title fs-3">Champs Elysees</h5>
+                  <div
+                    class="d-flex justify-content-start column-gap-2 align-items-center date-before"
+                  >
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <p class="m-0">fri 17th 2024</p>
+                  </div>
+                  <p class="card-text fs-6 mt-2">
+                    The Avenue des Champs-Élysées is an avenue in the 8th
+                    arrondissement of Paris, France, 1.9 kilometres long and 70
+                    metres wide, running between the Place de la Concorde in the
+                    east and the Place Charles de Gaulle in the west, where the
+                    Arc de Triomphe is located.
+                  </p>
+                  <p class="card-text" style="color: var(--medium)">
+                    <small>Last updated 3 mins ago</small>
+                  </p>
+                  <div class="d-flex text-capitalize column-gap-2">
+                    <a href="" class="btn paris-btn">
+                      <i class="fa-solid fa-podcast"></i> podcast</a
+                    >
+                    <a href="" class="btn paris-btn">
+                      <i class="fa-solid fa-clock"></i> time</a
+                    >
+                    <a href="" class="btn paris-btn">
+                      <i class="fa-solid fa-play"></i> play</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- card 4 -->
+          <div class="card mb-3 rounded-5 paris-edit paris-edit-2">
+            <div class="row g-0">
+              <div class="col-md-9">
+                <div
+                  class="card-body p-4 ms-md-4 paris-body h-100 rounded-5 content-body"
+                >
+                  <h5 class="card-title fs-3">Tulare Gardens</h5>
+                  <div
+                    class="d-flex justify-content-start column-gap-2 align-items-center date-before"
+                  >
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <p class="m-0">fri 17th 2024</p>
+                  </div>
+                  <p class="card-text fs-6 mt-2">
+                    The Tuileries Garden is a public garden between the Louvre
+                    and the Place de la Concorde in the 1st arrondissement of
+                    Paris, France. Created by Catherine de' Medici as the garden
+                    of the Tuileries Palace in 1564, it was opened to the public
+                    in 1667 and became a public park after the French
+                    Revolution.
+                  </p>
+                  <p class="card-text" style="color: var(--medium)">
+                    <small>Last updated 3 mins ago</small>
+                  </p>
+                  <div class="d-flex text-capitalize column-gap-2">
+                    <a href="" class="btn paris-btn">
+                      <i class="fa-solid fa-podcast"></i> podcast</a
+                    >
+                    <a href="" class="btn paris-btn">
+                      <i class="fa-solid fa-clock"></i> time</a
+                    >
+                    <a href="" class="btn paris-btn">
+                      <i class="fa-solid fa-play"></i> play</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 contain-before">
+                <div class="contain-img rounded-5 h-100">
+                  <img
+                    src="img/paris/p4.jpg"
+                    class="img-fluid w-100 pop-img h-100"
+                    alt="..."
+                    style="height: 300px"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- paris content -->
+    </section>
+    <!-- paris section -->
+
+    <!-- thanks section -->
+    <section class="thanks-sec">
+      <!-- head -->
+      <div
+        class="container-fluid p-4 d-flex justify-content-center align-items-center egypt-head fs-1 text-white"
+        style="background-color: var(--The-darkest)"
+      >
+        <h1>Thank You</h1>
+      </div>
+      <!-- head -->
+      <!-- content -->
+      <div class="container py-5 px-lg-0 px-sm-3">
+        <div class="row gap-5 d-flex justify-content-center">
+          <!-- card 1 -->
+          <div
+            class="card col-md-3 thanks-card p-0 overflow-hidden rounded-5 border-0"
+            style="background-color: var(--light)"
+          >
+            <img
+              src="img/thanks/1-removebg-preview.png"
+              class="card-img h-100"
+              alt="..."
+            />
+            <div class="card-img-overlay card-overlay">
+              <div class="thanks-pop ps-2">
+                <h5 class="card-title fs-2 text-white mb-1">Eng.Ahmed</h5>
+              </div>
+              <div class="appear">
+                <p class="card-text text-white mt-2">
+                  <i class="fa-solid fa-clock me-2"></i
+                  ><small>Last updated 3 mins ago</small>
+                </p>
+                <p class="card-text" style="color: var(--medium)">
+                  Thank you for your commitment and exceptional performance.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- card 2 -->
+          <div
+            class="card col-md-3 thanks-card p-0 overflow-hidden rounded-5 border-0"
+            style="background-color: var(--light)"
+          >
+            <img
+              src="img/thanks/2-removebg-preview.png"
+              class="card-img h-100"
+              alt="..."
+            />
+            <div class="card-img-overlay card-overlay">
+              <div class="thanks-pop ps-2">
+                <h5 class="card-title fs-2 text-white mb-1">Eng.Ahmed</h5>
+              </div>
+              <div class="appear">
+                <p class="card-text text-white mt-2">
+                  <i class="fa-solid fa-clock me-2"></i
+                  ><small>Last updated 3 mins ago</small>
+                </p>
+                <p class="card-text" style="color: var(--medium)">
+                  Thank you for your commitment and exceptional performance.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- card 3 -->
+          <div
+            class="card col-md-3 thanks-card p-0 overflow-hidden rounded-5 border-0"
+            style="background-color: var(--light)"
+          >
+            <img
+              src="img/thanks/3-removebg-preview.png"
+              class="card-img h-100"
+              alt="..."
+            />
+            <div class="card-img-overlay card-overlay">
+              <div class="thanks-pop ps-2">
+                <h5 class="card-title fs-2 text-white mb-1">Eng.Ahmed</h5>
+              </div>
+              <div class="appear">
+                <p class="card-text text-white mt-2">
+                  <i class="fa-solid fa-clock me-2"></i
+                  ><small>Last updated 3 mins ago</small>
+                </p>
+                <p class="card-text" style="color: var(--medium)">
+                  Thank you for your commitment and exceptional performance.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- content -->
+    </section>
+    <!-- thanks section -->
+
+    <!-- join us -->
+    <section class="join-us-sec">
+      <!-- head -->
+      <div
+        class="container-fluid p-4 d-flex justify-content-center align-items-center egypt-head fs-1 text-white text-capitalize"
+        style="background-color: var(--The-darkest)"
+      >
+        <h1>join to our world </h1>
+        
+      </div>
+      <!-- head -->
+      <div class="container py-5 px-lg-0 px-sm-3">
+        <div class="row  gap-5  justify-content-center ">
+          <!-- item 1 -->
+          <div
+            class=" col-5 col-lg-2  text-center text-capitalize d-flex flex-column align-items-center justify-content-center row-gap-2 rounded-5 py-4 join-div overflow-hidden"
+          >
+            <p class="m-0 fs-3">follow now</p>
+            <i class="fa-brands fa-square-facebook" style="font-size: 75px"></i>
+            <div
+              class="join-pop d-flex align-items-center justify-content-center column-gap-2"
+            >
+              <a href="" class="text-white fs-5">go to link</a>
+              <i class="fa-solid fa-arrow-right fs-5 "></i>
+            </div>
+          </div>
+          <!-- item 2 -->
+          <div
+            class=" col-5 col-lg-2 text-center text-capitalize d-flex flex-column align-items-center justify-content-center row-gap-2 rounded-5 py-4 join-div overflow-hidden"
+          >
+            <p class="m-0 fs-3">follow now</p>
+            <i class="fa-brands fa-square-instagram" style="font-size: 75px"></i>
+            <div
+            class="join-pop d-flex align-items-center justify-content-center column-gap-2"
+            >
+            <a href="" class="text-white fs-5">go to link</a>
+            <i class="fa-solid fa-arrow-right fs-5"></i>
+          </div>
+          </div>
+          <!-- item 3 -->
+          <div
+            class=" col-5 col-lg-2 text-center text-capitalize d-flex flex-column align-items-center justify-content-center row-gap-2 rounded-5 py-4 join-div overflow-hidden"
+          >
+            <p class="m-0 fs-3">follow now</p>
+            <i class="fa-brands fa-square-twitter" style="font-size: 75px"></i>
+            <div
+              class="join-pop d-flex align-items-center justify-content-center column-gap-2"
+            >
+              <a href="" class="text-white fs-5">go to link</a>
+              <i class="fa-solid fa-arrow-right fs-5"></i>
+            </div>
+          </div>
+          <!-- item 4 -->
+          <div
+            class=" col-5 col-lg-2 text-center text-capitalize d-flex flex-column align-items-center justify-content-center row-gap-2 rounded-5 py-4 join-div overflow-hidden"
+          >
+            <p class="m-0 fs-3">follow now</p>
+            <i class="fa-brands fa-linkedin" style="font-size: 75px"></i>
+            <div
+              class="join-pop d-flex align-items-center justify-content-center column-gap-2"
+            >
+              <a href="" class="text-white fs-5">go to link</a>
+              <i class="fa-solid fa-arrow-right fs-5"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- join us -->
+  
+
+    <script src="js/script.js"></script>
+    <script src="js/all.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
