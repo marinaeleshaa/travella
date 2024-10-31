@@ -522,20 +522,20 @@ header .btn {
 }
 
 @keyframes join {
-  from{
+  from {
     transform: scale(0);
     -webkit-transform: scale(0);
     -moz-transform: scale(0);
     -ms-transform: scale(0);
     -o-transform: scale(0);
-}
-  to{
+  }
+  to {
     transform: scale(1.3, 1.3);
     -webkit-transform: scale(1.3, 1.3);
     -moz-transform: scale(1.3, 1.3);
     -ms-transform: scale(1.3, 1.3);
     -o-transform: scale(1.3, 1.3);
-}
+  }
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -564,4 +564,60 @@ footer a:hover {
 
 .item {
   /* width: fit-content !important; */
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* aside */
+
+.aside-div {
+  z-index: 5000;
+  top: 25vh;
+  right: 0;
+  width: fit-content;
+  position: relative;
+}
+
+.bookmark {
+  width: 50px;
+  height: 100px;
+  background-color: var(--dark);
+  left: -50px;
+}
+
+.aside-parent {
+  transform: translateX(70px);
+  transition: transform 0.8s ease;
+  -webkit-transition: transform 0.8s ease;
+  -moz-transition: transform 0.8s ease;
+  -ms-transition: transform 0.8s ease;
+  -o-transition: transform 0.8s ease;
+}
+
+.aside-parent:hover {
+  transform: translateX(0px);
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  -o-transform: translateX(0px);
+}
+
+.aside-cont {
+  background-color: var(--dark);
+}
+
+.aside-icon {
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  cursor: pointer !important;
+}
+.aside-icon:hover {
+  transform: scale(1.3, 1.3);
+  -webkit-transform: scale(1.3, 1.3);
+  -moz-transform: scale(1.3, 1.3);
+  -ms-transform: scale(1.3, 1.3);
+  -o-transform: scale(1.3, 1.3);
 }
