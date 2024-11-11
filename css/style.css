@@ -186,7 +186,6 @@ header .btn {
 }
 .edit-card {
   transition: 0.2s ease-in-out;
-  height: 550px;
   box-shadow: 0px 0px 15px -5px var(--medium);
 }
 .edit-card:hover {
@@ -312,7 +311,7 @@ header .btn {
   transition: 0.5s ease-in-out;
 }
 .thanks-card:hover .card-overlay {
-  background-color: #054b9163;
+  background: linear-gradient(to top , #054b91,#054b91c2, #054b9188,transparent) ;
   transform: translateY(60%);
 }
 .thanks-pop {
