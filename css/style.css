@@ -185,7 +185,7 @@ header .btn {
   height: 250px !important;
 }
 .edit-card {
-  height: 550px;
+  height: fit-content;
   transition: 0.2s ease-in-out;
   box-shadow: 0px 0px 15px -5px var(--medium);
 }
